@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Extended_AP_Check_Stub__Check_No_">
+          <DataField>Extended_AP_Check_Stub__Check_No_</DataField>
+        </Field>
+        <Field Name="CompanyInformation_Name">
+          <DataField>CompanyInformation_Name</DataField>
+        </Field>
+        <Field Name="Page_______FORMAT_CurrReport_PAGENO_">
+          <DataField>Page_______FORMAT_CurrReport_PAGENO_</DataField>
+        </Field>
+        <Field Name="Vendor_No____________VendorName">
+          <DataField>Vendor_No____________VendorName</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Check_Date_">
+          <DataField>Extended_AP_Check_Stub__Check_Date_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__External_Document_No_">
+          <DataField>Extended_AP_Check_Stub__External_Document_No_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Invoice_Date_">
+          <DataField>Extended_AP_Check_Stub__Invoice_Date_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Document_No_">
+          <DataField>Extended_AP_Check_Stub__Document_No_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Discount_Amount_">
+          <DataField>Extended_AP_Check_Stub__Discount_Amount_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Discount_Amount_Format">
+          <DataField>Extended_AP_Check_Stub__Discount_Amount_Format</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Net_Amount_">
+          <DataField>Extended_AP_Check_Stub__Net_Amount_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Net_Amount_Format">
+          <DataField>Extended_AP_Check_Stub__Net_Amount_Format</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Gross_Amount_">
+          <DataField>Extended_AP_Check_Stub__Gross_Amount_</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Gross_Amount_Format">
+          <DataField>Extended_AP_Check_Stub__Gross_Amount_Format</DataField>
+        </Field>
+        <Field Name="Total_for_Check_No________Check_No_______">
+          <DataField>Total_for_Check_No________Check_No_______</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Gross_Amount">
+          <DataField>Extended_AP_Check_Stub__Gross_Amount</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Gross_AmountFormat">
+          <DataField>Extended_AP_Check_Stub__Gross_AmountFormat</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Discount_Amount">
+          <DataField>Extended_AP_Check_Stub__Discount_Amount</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Discount_AmountFormat">
+          <DataField>Extended_AP_Check_Stub__Discount_AmountFormat</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Net_Amount">
+          <DataField>Extended_AP_Check_Stub__Net_Amount</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub__Net_AmountFormat">
+          <DataField>Extended_AP_Check_Stub__Net_AmountFormat</DataField>
+        </Field>
+        <Field Name="Extend_AP_Check_StubCaption">
+          <DataField>Extend_AP_Check_StubCaption</DataField>
+        </Field>
+        <Field Name="ReferenceCaption">
+          <DataField>ReferenceCaption</DataField>
+        </Field>
+        <Field Name="Internal_NoCaption">
+          <DataField>Internal_NoCaption</DataField>
+        </Field>
+        <Field Name="Discount_AmtCaption">
+          <DataField>Discount_AmtCaption</DataField>
+        </Field>
+        <Field Name="Gross_AmtCaption">
+          <DataField>Gross_AmtCaption</DataField>
+        </Field>
+        <Field Name="Check_Date_Caption">
+          <DataField>Check_Date_Caption</DataField>
+        </Field>
+        <Field Name="Check_No_Caption">
+          <DataField>Check_No_Caption</DataField>
+        </Field>
+        <Field Name="Vendor_No_Caption">
+          <DataField>Vendor_No_Caption</DataField>
+        </Field>
+        <Field Name="Extended_AP_Check_Stub_Entry_No">
+          <DataField>Extended_AP_Check_Stub_Entry_No</DataField>
+        </Field>
+        <Field Name="PostingDesc">
+          <DataField>PostingDesc</DataField>
+        </Field>
+        <Field Name="CopyNo">
+          <DataField>CopyNo</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

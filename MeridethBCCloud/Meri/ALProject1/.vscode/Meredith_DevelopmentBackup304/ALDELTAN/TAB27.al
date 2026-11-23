@@ -74,7 +74,7 @@ tableextension 50006 tableextension70000247 extends Item
                 // MER0001 <<
             end;
         }
-        field(50000; "Gift Card"; Option)
+        field(50000; "MER Gift Card"; Option) // MER-BC29 2026-11-22: renamed - must match the BC25 transition field (data migration)
         {
             Caption = 'Gift Card';
             OptionCaption = ' ,Activate,Deactivate,Balance Increase';
@@ -84,7 +84,7 @@ tableextension 50006 tableextension70000247 extends Item
     }
     keys
     {
-        key(Key1; "Gift Card")
+        key(Key1; "MER Gift Card")
         {
         }
     }

@@ -29,8 +29,9 @@ tableextension 50001 tableextension70000325 extends Currency
 
         //Unsupported feature: Deletion (FieldCollection) on "Symbol(Field 56)".
 
-        field(50000; Symbol_; Code[5])
+        field(50000; "MER Symbol"; Code[5]) // MER-BC29 2026-11-22: renamed - must match the BC25 transition field (data migration)
         {
+            Caption = 'Symbol';
             DataClassification = ToBeClassified;
         }
         // field(37028300; "ISO Code old"; Code[3])

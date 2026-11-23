@@ -37,17 +37,17 @@ tableextension 50041 tableextension50041 extends "G/L Entry"
     //         }
     fields
     {
-        field(50000; "EFT Store No."; Code[10])
+        field(50000; "MER EFT Store No."; Code[10]) // MER-BC29 2026-11-22: renamed - must match the BC25 transition field
         {
             Caption = 'EFT Store No.';
             // TableRelation = Table37028302;
         }
-        field(50001; "EFT Terminal No."; Code[10])
+        field(50001; "MER EFT Terminal No."; Code[10]) // MER-BC29 2026-11-22: renamed
         {
             Caption = 'EFT Terminal No.';
             // TableRelation = Table37028303.Field2 WHERE (Field1=FIELD("EFT Store No."));
         }
-        field(50002; "EFT Transaction Entry No."; Integer)
+        field(50002; "MER EFT Transaction Entry No."; Integer) // MER-BC29 2026-11-22: renamed
         {
             BlankZero = true;
             Caption = 'EFT Transaction Entry No.';
@@ -56,7 +56,7 @@ tableextension 50041 tableextension50041 extends "G/L Entry"
             // ELSE IF ("EFT Transaction Archive Status"=CONST(Archived)) Table37028357.Field3 WHERE (Field1=FIELD("EFT Store No."),
             // Field2=FIELD("EFT Terminal No."));
         }
-        field(50003; "EFT Transaction Archive Status"; Option)
+        field(50003; "MER EFT Trans. Archive Status"; Option) // MER-BC29 2026-11-22: renamed
         {
             Caption = 'EFT Transaction Archive Status';
             Editable = false;
@@ -66,7 +66,7 @@ tableextension 50041 tableextension50041 extends "G/L Entry"
     }
     keys
     {
-        key(Key1; "EFT Store No.", "EFT Terminal No.", "EFT Transaction Entry No.")
+        key(Key1; "MER EFT Store No.", "MER EFT Terminal No.", "MER EFT Transaction Entry No.")
         {
         }
     }

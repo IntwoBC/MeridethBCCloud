@@ -1,0 +1,38 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Microsoft cloud sandbox",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            //"environmentName": "MeredithDigital-DEV",
+            "environmentName": "MeredithDigital-UAT",
+            "tenant": "b73fbd53-4724-4537-80ec-c0af3905bf86",
+            "startupObjectId": 22,
+            "startupObjectType": "Page",
+            "breakOnError": "All",
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "schemaUpdateMode": "Synchronize",
+        },
+        {
+    "name": "Attach: Web Services",
+    "type": "al",
+    "request": "attach",
+    "environmentType": "Sandbox",
+    "environmentName": "MeredithDigital-DEV",
+    "breakOnError": "All",
+    "breakOnRecordWrite": "None",
+    "enableSqlInformationDebugger": true,
+    "enableLongRunningSqlStatements": true,
+    "longRunningSqlStatementsThreshold": 500,
+    "numberOfSqlStatements": 10,
+    "breakOnNext": "WebServiceClient",
+    "tenant": "b73fbd53-4724-4537-80ec-c0af3905bf86",
+    "userId": "05dd9813-ec54-4538-83bd-22aa907e1dfc"
+}
+        
+    ]
+}

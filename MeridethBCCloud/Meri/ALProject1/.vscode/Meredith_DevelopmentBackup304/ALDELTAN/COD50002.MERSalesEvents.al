@@ -12,7 +12,8 @@
 //   Codeunit 80 Sales-Post MER0001/3/5/9 (Gen. Jnl.)    Codeunit "Sales Post Invoice Events".OnPostLedgerEntryOnBeforeGenJnlPostLine
 //   Codeunit 12 Gen. Jnl.-Post Line MER0001/MER0002     Table "Cust. Ledger Entry".OnAfterCopyCustLedgerEntryFromGenJnlLine
 //   Table 222 Ship-to Address OnInsert MER0002/MER0004  Table "Ship-to Address".OnAfterInsertEvent
-codeunit 50002 "MER Sales Events"
+// MER-BC29 2026-11-23: ID 50002 -> 50018 because CRM_BC_Intwo uses codeunit 50002 "Req Worksheet Subscriber" (same app)
+codeunit 50018 "MER Sales Events"
 {
     Permissions = tabledata "Document Commission Charges" = rimd,
                   tabledata "SIL SCrML Union" = rimd;
